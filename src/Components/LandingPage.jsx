@@ -129,7 +129,7 @@ export default function LandingPage() {
             </section>
 
             {/* Cards Section */}
-            <section className="mt-20 grid gap-8 md:grid-cols-3 pb-4">
+            <section className="mt-20 grid gap-8 md:grid-cols-3">
                 {cardData.map((card, index) => (
                     <motion.div
                         key={index}
