@@ -17,8 +17,8 @@ const cardData = [
 
 export default function LandingPage() {
     return (
-        
-        <div className="bg-gradient-to-br from-white to-blue-50 min-h-screen pt-24  md:px-16">
+
+        <div className="bg-gradient-to-br from-white to-blue-50 min-h-screen pt-24 px-4 md:px-16 ">
 
             {/* Hero Section */}
             <section className="text-center space-y-6">
@@ -129,7 +129,7 @@ export default function LandingPage() {
             </section>
 
             {/* Cards Section */}
-            <section className="mt-20 grid gap-8 md:grid-cols-3">
+            <section className="mt-20 grid gap-8 md:grid-cols-3 pb-4">
                 {cardData.map((card, index) => (
                     <motion.div
                         key={index}
