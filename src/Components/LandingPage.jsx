@@ -17,7 +17,8 @@ const cardData = [
 
 export default function LandingPage() {
     return (
-        <div className="bg-gradient-to-br from-white to-blue-50 min-h-screen pt-24 px-4 md:px-16">
+        
+        <div className="bg-gradient-to-br from-white to-blue-50 min-h-screen pt-24  md:px-16">
 
             {/* Hero Section */}
             <section className="text-center space-y-6">
