@@ -46,6 +46,62 @@ export default function LandingPage() {
                     Book Demo
                 </motion.a>
             </section>
+            {/* Highlights Section (between hero and video) */}
+            <section className="mt-12 md:mt-20 text-center">
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-2xl md:text-3xl font-bold text-gray-800"
+                >
+                    Why Choose CareerSuite?
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-gray-600 mt-2 max-w-xl mx-auto"
+                >
+                    Transform your workforce with structured growth, tailored guidance, and impactful upskilling.
+                </motion.p>
+
+                {/* Steps / Highlights */}
+                <div className="mt-10 grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+                    {[
+                        {
+                            emoji: "🎯",
+                            title: "Targeted Upskilling",
+                            text: "Map learning paths directly to career goals and roles.",
+                        },
+                        {
+                            emoji: "📊",
+                            title: "Real-Time Insights",
+                            text: "Track talent growth, readiness, and development impact.",
+                        },
+                        {
+                            emoji: "🤝",
+                            title: "Expert Guidance",
+                            text: "Connect with mentors and curated content to grow fast.",
+                        },
+                    ].map((item, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: idx * 0.2 }}
+                            viewport={{ once: true }}
+                            className="bg-white p-6 rounded-xl shadow hover:shadow-md transition"
+                        >
+                            <div className="text-4xl mb-2">{item.emoji}</div>
+                            <h4 className="font-bold text-blue-700 text-lg">{item.title}</h4>
+                            <p className="text-gray-600 text-sm mt-1">{item.text}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
 
             {/* Video Section */}
             <section className="mt-16 text-center">
