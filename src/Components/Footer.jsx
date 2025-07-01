@@ -10,7 +10,8 @@ export default function Footer() {
             viewport={{ once: true }}
             className="bg-gray-900 text-gray-200 pt-14 pb-8 px-6 md:px-20"
         >
-            <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
+            {/* DESKTOP VIEW */}
+            <div className="hidden md:grid max-w-7xl mx-auto grid-cols-4 gap-10">
                 {/* Branding */}
                 <div>
                     <h2 className="text-2xl font-bold text-white mb-2">CareerSuite</h2>
@@ -25,7 +26,6 @@ export default function Footer() {
                     <ul className="text-sm space-y-2 text-gray-400">
                         <li>🎯 Personalized Career Pathing</li>
                         <li>📚 Skill Gap Analysis</li>
-                        {/* <li>🤝 Mentor Matching</li> */}
                         <li>📈 Progress Analytics</li>
                         <li>🛠 Role-Based Learning</li>
                     </ul>
@@ -57,9 +57,20 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Divider + Copyright */}
-            <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
-                &copy; {new Date().getFullYear()} CareerSuite. All rights reserved. | Designed with 💙 by Team CareerSuite
+            {/* MOBILE VIEW */}
+            <div className="md:hidden flex flex-col items-center space-y-3">
+                <div className="text-sm text-gray-400">support@careersuite.com</div>
+                <div className="flex justify-center gap-6 text-xl">
+                    <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white"><FaLinkedin /></a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white"><FaGithub /></a>
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white"><FaTwitter /></a>
+                    <a href="mailto:support@careersuite.com" className="hover:text-white"><FaEnvelope /></a>
+                </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+                &copy; {new Date().getFullYear()} CareerSuite. All rights reserved.
             </div>
         </motion.footer>
     );
